@@ -9,6 +9,7 @@ starting from the leftmost element.
 
 SYNTAX: collection.reduceLeft(binaryOperator)
 
+Note: reduceRight is same as reduceLeft, just it process elements from right to left
  */
 
 object ArrayMethods2 extends  App {
@@ -20,6 +21,10 @@ object ArrayMethods2 extends  App {
     (x+y)
   });
   println(s"Sum: $sum");
+
+  var arr2 = Array(10,20,50,15,35);
+  var max = arr2.reduceRight(_ max _);
+  println(s"Maximum: $max");
 
   /*
   It's worth noting that reduceLeft assumes that the collection is not empty.
